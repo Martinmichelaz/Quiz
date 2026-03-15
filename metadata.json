@@ -1,0 +1,5 @@
+{
+  "name": "QuizMaster AI",
+  "description": "An AI-powered quiz platform where Gemini validates your answers and tracks your progress on a global leaderboard.",
+  "requestFramePermissions": []
+}

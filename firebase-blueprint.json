@@ -1,0 +1,25 @@
+{
+  "entities": {
+    "User": {
+      "title": "User Profile",
+      "description": "Stores user progress and leaderboard data.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Unique user ID" },
+        "displayName": { "type": "string", "description": "User's display name" },
+        "email": { "type": "string", "description": "User's email" },
+        "photoURL": { "type": "string", "description": "User's avatar URL" },
+        "score": { "type": "integer", "description": "Total points earned" },
+        "progress": { "type": "integer", "description": "Index of the current question" },
+        "lastActive": { "type": "string", "format": "date-time", "description": "Last time the user played" }
+      },
+      "required": ["uid", "displayName", "score", "progress"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles and progress"
+    }
+  }
+}
